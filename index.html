@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#061f17">
+  <title>Aura Arcade | Aura &amp; Oak</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="site">
+    <header class="topbar">
+      <button class="brand" id="brandHomeButton" type="button" aria-label="Return to Aura Arcade home">
+        <span class="brand-bean" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <strong>Aura &amp; Oak</strong>
+          <span>Coffee Arcade</span>
+        </span>
+      </button>
+      <div class="top-score">
+        Games in the house
+        <strong>04</strong>
+      </div>
+    </header>
+
+    <section class="view active" id="homeView">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Play. Sip. Remember.</p>
+          <h1>Aura <span>Arcade</span></h1>
+          <p class="hero-text">
+            Four small games, one warm café. Pick your ritual, chase a high score,
+            and make the wait for your coffee a little more memorable.
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-ring"></div>
+          <div class="steam"></div>
+          <div class="steam"></div>
+          <div class="hero-cup"></div>
+        </div>
+      </div>
+
+      <div class="library-heading">
+        <h2>Choose your game</h2>
+        <p>Every game works with keyboard, mouse, or touch. Your best scores stay saved on this device.</p>
+      </div>
+
+      <div class="game-grid">
+        <button class="game-card" type="button" data-game="snake">
+          <span class="card-number">GAME 01</span>
+          <span class="card-art pixel-snake" aria-hidden="true">
+            <i></i><i></i><i></i><i></i>
+          </span>
+          <span class="card-copy">
+            <h3>Aura Snake</h3>
+            <span class="card-meta"><span>Classic · Endless</span><span class="play-chip">Play</span></span>
+          </span>
+        </button>
+
+        <button class="game-card" type="button" data-game="catch">
+          <span class="card-number">GAME 02</span>
+          <span class="card-art fall-art" aria-hidden="true"></span>
+          <span class="card-copy">
+            <h3>Bean Catch</h3>
+            <span class="card-meta"><span>Reflex · 45 sec</span><span class="play-chip">Play</span></span>
+          </span>
+        </button>
+
+        <button class="game-card" type="button" data-game="memory">
+          <span class="card-number">GAME 03</span>
+          <span class="card-art memory-art" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i>
+          </span>
+          <span class="card-copy">
+            <h3>Oak Memory</h3>
+            <span class="card-meta"><span>Memory · 8 pairs</span><span class="play-chip">Play</span></span>
+          </span>
+        </button>
+
+        <button class="game-card" type="button" data-game="break">
+          <span class="card-number">GAME 04</span>
+          <span class="card-art brick-art" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i>
+            <i></i><i></i><i></i><i></i><i></i>
+          </span>
+          <span class="card-copy">
+            <h3>Espresso Break</h3>
+            <span class="card-meta"><span>Arcade · 3 lives</span><span class="play-chip">Play</span></span>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section class="view" id="gameView">
+      <div class="game-room">
+        <div class="room-head">
+          <button class="ghost-button" id="backButton" type="button">← Games</button>
+          <h1 class="room-title" id="roomTitle">Aura Snake</h1>
+          <div class="room-best">Best<strong id="bestScore">000</strong></div>
+        </div>
+
+        <div class="game-panel">
+          <div class="game-hud">
+            <div class="hud-cell">
+              <span class="hud-label">Score</span>
+              <span class="hud-value" id="scoreValue">000</span>
+            </div>
+            <div class="hud-cell">
+              <span class="hud-label" id="middleLabel">Speed</span>
+              <span class="hud-value" id="middleValue">1x</span>
+            </div>
+            <div class="hud-cell">
+              <span class="hud-label" id="rightLabel">Beans</span>
+              <span class="hud-value" id="rightValue">0</span>
+            </div>
+          </div>
+
+          <div class="canvas-wrap" id="canvasWrap">
+            <canvas id="gameCanvas" width="720" height="720" aria-label="Aura Arcade game canvas"></canvas>
+            <div class="game-overlay" id="gameOverlay">
+              <p class="overlay-kicker" id="overlayKicker">Aura &amp; Oak presents</p>
+              <h2 id="overlayTitle">Aura Snake</h2>
+              <p class="overlay-copy" id="overlayCopy">Collect coffee beans, grow longer, and keep your cool.</p>
+              <button class="primary-button" id="overlayButton" type="button">Start Game</button>
+            </div>
+          </div>
+
+          <div class="room-actions">
+            <button class="action-button" id="pauseButton" type="button" disabled>Pause</button>
+            <button class="action-button" id="restartButton" type="button" disabled>Restart</button>
+          </div>
+          <p class="game-help" id="gameHelp"></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>Aura &amp; Oak Coffee Café</span>
+      <span>Show your score in café for a surprise reward.</span>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
