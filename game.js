@@ -885,7 +885,7 @@
       };
     }
 
-    document.querySelectorAll(".game-card").forEach((button) => {
+    document.querySelectorAll("[data-game]").forEach((button) => {
       button.addEventListener("click", () => openGame(button.dataset.game));
     });
 
