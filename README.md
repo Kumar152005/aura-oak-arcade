@@ -1,12 +1,13 @@
 # Aura & Oak Arcade
 
-A premium café-themed browser arcade with five complete games:
+A premium café-themed browser arcade with six complete games:
 
 - Aura Snake
 - Bean Catch
 - Oak Memory
 - Espresso Break
 - Coffee Rush
+- Pixel Café Simulator
 
 ## Play
 
@@ -18,7 +19,8 @@ Open the GitHub Pages link in any modern browser. The arcade supports desktop ke
 - Canvas-rendered game graphics
 - Saved high scores using local storage
 - Pause and restart controls
-- No external libraries or assets
+- No external asset downloads at runtime
 - A full Phaser-powered endless runner
+- A persistent Phaser and React café-management simulator
 
 Built for Aura & Oak Coffee Café.
