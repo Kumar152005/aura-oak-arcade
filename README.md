@@ -24,3 +24,9 @@ Open the GitHub Pages link in any modern browser. The arcade supports desktop ke
 - A persistent Phaser and React café-management simulator
 
 Built for Aura & Oak Coffee Café.
+
+## Aura & Oak Café Website
+
+The complete multi-page café brand website is included in `cafe-website/`.
+
+[Open the café website](https://kumar152005.github.io/aura-oak-arcade/cafe-website/)
